@@ -1,0 +1,24 @@
+{
+    "name": "jsondata",
+    "data1": [
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "middleInitial": "X"
+        }
+    ],
+    "data2": [
+        {
+            "dataX": "string",
+            "dataY": null,
+            "dateZ": 13
+        }
+    ],
+    "data2": [
+        {
+            "functionX": "x",
+            "dateY": "2022-04-01",
+            "undefZ": null
+        }
+    ]  
+}

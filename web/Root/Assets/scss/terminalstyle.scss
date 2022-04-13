@@ -1,0 +1,290 @@
+
+/*
+    Created on : Apr 7, 2022, 12:08:39 AM
+    Author     : eVmPr
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Roboto+Slab:wght@400;700&family=Special+Elite&family=VT323&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inconsolata&family=Share+Tech+Mono&display=swap');
+$VT323: 'VT323',Inconsolata,monospace;
+$inconsolata: 'Inconsolata', monospace;
+$term-screen:repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+:root {
+    --vt323: 'VT323', 'Iconsolata', monospace;
+    --green: #5bf870;
+    --t-green: radial-gradient( rgba(0, 150, 0, 0.75), black 120%);
+    --t-screen-line: repeating-linear-gradient( 0deg, rgba(black, 0.15), rgba(black, 0.15) 1px, transparent 1px, transparent 2px);
+    --red-color: #c0100a;
+    --red-bg: #1b0302;
+    --blue-color: #a5a5ff;
+    --blue-bg: #4242e7;
+    --term: "> ";
+}
+
+div#terminal-body {
+    background-color: black;
+    /*background-image: var(--t-green);*/
+    color: var(--green);
+    font: 1.3rem $VT323 ;
+    text-shadow: 0 0 5px #C8C8C8;
+    width: 75vh;
+    height: 75vh;
+    top: 100%;
+    overflow: hidden;
+}
+.terminal{
+    border: 1px solid black;
+    border: solid 3px #BBBBBB;
+    border-radius: 16px;
+    background-color: #131;
+    /* black shadow at the top of the terminal */
+    background-image: 
+        radial-gradient(ellipse 1000% 100% at 50% 90%, transparent, #121);
+    background-position: center;
+    display: block;
+    /* shadow around the terminal */
+    box-shadow: inset 0 0 10em 1em rgba(0,0,0,0.5);
+    /* prevents scanline from forming a scrollwheel */
+    overflow:hidden;
+}
+.container .overlay {
+    background: rgba(51, 255, 51, 0.9);
+    color: #121010;
+    position: absolute;
+    width: auto;
+    height: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    line-height: 50px;
+    display: inline;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Courier New;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    z-index: 3;
+    animation: overlay-anim 10s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; }
+
+.overlayback {
+    background: rgba(187, 187, 187, 0.5);
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: auto;
+    animation: overlay-anim 10s linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite; }
+
+.container {
+    text-align: center;
+    width: inherit;
+    height: inherit;
+    position: relative;
+    overflow: hidden; }
+
+.container::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(21, 19, 19, 0.2);
+    opacity: 0;
+    z-index: 2; }
+
+.container::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0.03) 50%, rgba(0, 0, 0, 0.45) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.22), rgba(0, 255, 0, 0.11), rgba(0, 0, 255, 0.22));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%; }
+
+.no-unfold {
+    text-align: center; }
+
+.container h1, .container h2, .container h3, .container h5, .container h6 {
+    color: #3F3; }
+
+.container hr {
+    border-top: 1px dotted #3F3;
+    border-bottom: none; }
+
+.container hr {
+    border-top: 1px solid #3F3;
+    border-bottom: 1px solid #3F3;
+    color: transparent;
+    background-color: transparent; }
+
+.container hr:after {
+    display: block;
+    margin-top: 2px;
+    border-top: 1px solid #3F3;
+    border-bottom: 1px solid #3F3; }
+.container p, .container span{
+    text-align: left;
+    font-size: 1em;
+}
+.blinkbar {
+    animation: blink 1.5s infinite;
+    letter-spacing: -0.13em; }
+
+div.scanline{
+    /*margin-top: -40%;*/
+    width: 100%;
+    height: 60px;
+    position: relative;
+    pointer-events: none;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation: scan 12s linear 0s infinite; /* You may need to change this. If the bar goes by too quickly, increase 5s. */
+    animation: scan 12s linear 0s infinite; /* Same as above */
+    background: linear-gradient(to bottom, rgba(56, 112, 82,0), rgba(56, 112, 82,0.1)) !important;
+}
+
+#front-screen{
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0.1) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+        );
+
+}
+#terminal-body {
+    
+    clip: auto;
+    color: rgba(128,255,128,0.8);
+}
+.terminal-screen{
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(18, 16, 16, 0.1) 50%,
+        rgba(0, 0, 0, 0.25) 50%
+        );
+    background-size: 100% 8px;
+    z-index: 3;
+    pointer-events: none;
+    animation: fadeIn 2s;
+}
+#input{
+    width: 100%;
+    display: block;
+    background: rgba(0,0,0,0);
+    color: var(--green);
+    margin-left: 5px;
+    font-family: $VT323;
+}
+#input:before{
+    content: var(--term);
+}
+#input{
+    width: 100%;
+    
+}
+#terminal-body span[contenteditable="true"]{
+    /*width: auto;*/
+    color: var(--green);
+    /*margin-left: 5px;*/
+    display: block;
+    cursor: text;
+}
+#terminal-body span[contenteditable="true"]:after{
+    content: "▐";
+    animation: cursor 1s infinite;
+    animation-timing-function: step-end;
+    line-height: 1rem;
+}
+#terminal-body form {
+    bottom:0;
+}
+#terminal-body::after {
+    content: "";
+    position: absolute;
+    /*    width: 100vh;
+        height: 100vh;*/
+    background: $term-screen;
+    /*    top: 0;
+        left: 0;*/
+}
+#terminal-body h3{
+    font-family: $VT323;
+    font-weight: normal;
+
+
+}
+#terminal-body blockquote{
+    width: 100%;
+    height: 58vh;
+    max-height: 58vh;
+    overflow-y: auto;
+}
+#terminal-content{
+
+    max-height: 95vh; 
+    overflow-y: auto;
+}
+
+#tinput{
+    background-color: rgba(0,0,0,1);
+    color: inherit;
+    position: relative;
+    /*font-size: 1em;*/
+    width: 100%;
+    bottom:0;
+}
+#terminal-body input[type=text]:focused{
+
+}
+#tinput:focused::before{
+    content: ">";
+}
+#terminal-body::selection {
+    background: #0080FF;
+    text-shadow: none;
+}
+
+#terminal-body input[type=text]{
+    background-color: rgba(255,255,255,0);
+/*    border-bottom: 2px solid white;
+    border-left: none;border-right: none;
+    border-top: none;*/
+border: none;
+    color: white;
+    margin-left: 10px;
+    cursor: text;
+    outline: none;
+    z-index: 3;
+}
+#terminal-body input[type=text]:before{
+    content: "$ ";
+    /*border-bottom: 2px*/
+}
+#terminal {
+    font-size: 16px ;
+}
+@-webkit-keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* You may need to change this depending on the length of your terminal. If the scanline stops halfway, increase the second number.*/
+}
+
+@keyframes scan{
+    from{ transform: translateY(-10%);}
+    to{  transform: translateY(5000%);} /* Same as above.*/
+}
+

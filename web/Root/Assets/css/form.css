@@ -1,0 +1,47 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Apr 1, 2022, 3:05:06 PM
+    Author     : eVmPr
+*/
+@import url("https://fonts.googleapis.com/css2?family=Prata&family=Roboto+Slab:wght@400;700&family=Special+Elite&family=Yellowtail&display=swap");
+:root {
+  --info-color: #3305fc;
+  --prata: 'Prata', serif;
+  --eite:'Special Elite', cursive;
+  --rslab: 'Roboto Slab', serif;
+  --ytail: 'Yellowtail', cursive;
+  --hover-color: #33b0ff; }
+
+form {
+  background-color: #ccc; }
+
+fieldset {
+  padding: 10; }
+
+legend {
+  font-size: 1em; }
+
+label {
+  font-size: 1em; }
+
+label i {
+  /*font-size: inherit;*/
+  background-color: #00f;
+  color: #fff; }
+
+label i:hover {
+  background-color: #fff;
+  color: var(--hover-color); }
+
+input {
+  font-size: 16px; }
+
+.pers-info {
+  font-size: 1em;
+  padding: 0 0 0 5px; }
+
+/*# sourceMappingURL=form.css.map */

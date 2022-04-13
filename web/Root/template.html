@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Template</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="refresh" content="100">
+        <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+        <!--<meta http-equiv="content-security-policy" content="default-src 'self';">-->
+        <meta http-equiv="default-style" content="Assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Elena Miller">
+        <meta name="keywords" content="vaccine,system, tracking">
+        <meta name="description" content="Personal Website">
+        <link rel="stylesheet" href="Assets/css/all.css" type="text/css">
+        <link rel="stylesheet" href="Assets/css/main.css" type="text/css">
+        <!--<link rel="stylesheet" href="Assets/css/glitch.css" type="text/css">-->
+        <link rel="stylesheet" href="Assets/css/terminal.css" type="text/css">
+        <script src="Assets/js/script.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!--<script src="https://kit.fontawesome.com/98e4c48f68.js" crossorigin="anonymous"></script>-->
+        <script src="https://kit.fontawesome.com/f1903f98ac.js" crossorigin="anonymous"></script>
+        <script src="utils/terminal.js">
+            window.onload = () => {
+                 document.getElementById("power").addEventListener('click', togglePower);
+            };
+        </script>
+
+        <script>
+//            window.onload = () => {
+////                    $id("nav-icon").setAttribute("onclick", "togglebox('navlist')");
+////                     $("navlist").setAttribute("style", "display: none");
+//               
+//            };
+//            document.getElementById("terminal").get;
+//            window.onload = () => {
+////                document.getElementById("terminal").setAttribute("power", "");
+////                document.addEventListener("", "");
+//            };
+        </script>
+    </head>
+
+    <body>
+        <header>
+            <!--<img src="Assets/image/placeholder.png" alt="logo" width="450">-->
+            <i class="fas fa-bars" id="nav-icon"
+               onclick="toggleMenu()"></i>
+            <span><i class="fas fa-heart"></i>Personal Website</span>
+        </header>
+
+
+        <aside id="nav-box">
+
+            <nav class="navlist" id="nlist">
+                <ul>
+                    <li>
+                        <i class="fas fa-home fa-1x"> </i><a href="#">HOME</a></li>
+                    <li><i class="fas fa-user fa-1x"> </i><a href="#">About Me</a></li>
+                    <li><i class="fas fa-book-bible fa-1x"> </i><a href="#">Bible </a></li>
+                    <li><i class="fas fa-user fa-1x"></i><a href="#">Resources</a></li>
+                    <li><i class="fas fa-user fa-1x"></i><a href="#">Forum</a></li>
+                    <li><i class="fas fa-user fa-1x"></i><a href="#">More</a></li>
+                    <!--                        <li><ul>
+                            <li>sublist</li>
+                        </ul></li>-->
+                </ul>
+            </nav>
+        </aside>
+        <main>
+
+            <h1>Template</h1>
+            <article>
+                <h1 class="glitch" data-text="Glitch">Glitch</h1>
+                <h2>Article</h2> 
+                <p>
+                    paragraph in article     
+                </p>
+
+                <section>
+                    <h3>Section 1</h3>
+                    <p>
+                        hello this is a paragraph. use this element for writing content.
+                        this paragraph is in an section element which is in an article
+                        element.
+                    </p>
+
+                </section>
+                <section>
+                    <h3>Section 2</h3>
+                    <p>this is an unordered list</p>
+                    <ul>
+                        <li>Item #</li>
+                        <li>Item #</li>
+                        <li>Item #</li>
+                        <li>Item #</li>
+                        <li>Item #</li>
+                        <li>Item #</li>
+                    </ul>
+                </section> 
+                <button class="fas fa-terminal toggle-btn" type="button" title="terminal"
+                        onclick="toggleContent('terminal');">
+                </button>
+                <!--                <i class="fas fa-terminal" style="cursor: pointer;"onclick="">
+                                    Click on terminal</i>-->
+            </article>
+
+        </main>
+        <div  class="toggle-box" id="right-box" >
+            <div id="terminal" class="toggle-content off" style="display: block;" ><!-- style="display:none;"-->
+                <div class="monitor" ><div id="term-body">
+                        <div id="terminal-screen">
+                            <div id="scanline"></div> 
+                            <!--<h1>TERMINAL #???</h1>-->
+                            <div id="term-content">
+
+                                <!--<hr/>-->
+                                <!--<input type="text">-->
+                                <span id="output"></span>
+                                <span id="input" contenteditable="true"><input type="text" name="t-in" id="t-in" contenteditable="true" ></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="button" id="power" class="fas fa-power-off " style="color: black;" ></button><!-- onclick="togglePower()" -->
+                <!--                <div id="terminal-body">
+                                    <div class="terminal-screen">
+                                        <div class="container">
+                                        <div id="terminal-content">
+                                            <h3>Terminal</h3>
+                                            <p>
+                                                
+                                            </p>
+                                        </div>
+                
+                                        <form>
+                                            <input type="text" name="tinput" id="tinput" value=""
+                                                   placeholder="input">
+                <input type="text" contenteditable="true" name="in" id="in" value="">
+                                            <span id="input" contenteditable="true" > text</span>
+                                            <span cmd=""> </span>
+                                                                    </form>
+                                        </div>
+                                        <div class="scanline"></div>
+                                    </div>
+                                </div>-->
+
+            </div>
+        </div>
+        <footer>
+            <address>
+                footer
+                s
+            </address>
+        </footer>
+
+    </body>
+</html>
